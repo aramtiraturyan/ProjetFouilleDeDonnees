@@ -1,0 +1,53 @@
+Full dataset
+
+Filter: Class assign
+		StringToWordVector
+		Normalization
+
+Classify
+IBK - plus proche voisin
+Test options: Cross-validation Folds 20
+Labels
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     datasetlabels-weka.filters.unsupervised.attribute.ClassAssigner-Clast-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    10000
+Attributes:   1199
+              [list of attributes omitted]
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6338               63.38   %
+Incorrectly Classified Instances      3662               36.62   %
+Kappa statistic                          0.2676
+Mean absolute error                      0.368 
+Root mean squared error                  0.5785
+Relative absolute error                 73.5994 %
+Root relative squared error            115.6942 %
+Total Number of Instances            10000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.785    0.517    0.603      0.785    0.682      0.281    0.661     0.612     1
+                 0.483    0.215    0.692      0.483    0.569      0.281    0.661     0.626     -1
+Weighted Avg.    0.634    0.366    0.647      0.634    0.625      0.281    0.661     0.619     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3925 1076 |    a = 1
+ 2586 2413 |    b = -1
+

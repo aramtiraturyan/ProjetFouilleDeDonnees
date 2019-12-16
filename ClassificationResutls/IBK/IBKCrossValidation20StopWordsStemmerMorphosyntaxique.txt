@@ -1,0 +1,55 @@
+Dataset only adjectives 
+
+Filter: Class assign
+		StringToWordVector
+		MultiStopWords
+		IteratedLovinStemmer
+		Normalize
+
+Classify
+IBK - plus proche voisin
+Test options: Cross-validation Folds 20
+Labels
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     todefine-weka.filters.unsupervised.attribute.ClassAssigner-Clast-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N0-stemmerweka.core.stemmers.IteratedLovinsStemmer-stopwords-handlerweka.core.stopwords.MultiStopwords-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    10000
+Attributes:   1256
+              [list of attributes omitted]
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6848               68.48   %
+Incorrectly Classified Instances      3152               31.52   %
+Kappa statistic                          0.3696
+Mean absolute error                      0.3338
+Root mean squared error                  0.5052
+Relative absolute error                 66.7557 %
+Root relative squared error            101.0389 %
+Total Number of Instances            10000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.807    0.437    0.649      0.807    0.719      0.381    0.735     0.693     1
+                 0.563    0.193    0.744      0.563    0.641      0.381    0.735     0.716     -1
+Weighted Avg.    0.685    0.315    0.696      0.685    0.680      0.381    0.735     0.705     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4035  966 |    a = 1
+ 2186 2813 |    b = -1
+

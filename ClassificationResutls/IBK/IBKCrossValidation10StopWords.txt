@@ -1,0 +1,54 @@
+Full dataset
+
+Filter: Class assign
+		StringToWordVector
+		MultiStopWords
+		Normalize
+
+Classify
+IBK - plus proche voisin
+Test options: Cross-validation Folds 10
+Labels
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     datasetlabels-weka.filters.unsupervised.attribute.ClassAssigner-Clast-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.MultiStopwords-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    10000
+Attributes:   1199
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6157               61.57   %
+Incorrectly Classified Instances      3843               38.43   %
+Kappa statistic                          0.2314
+Mean absolute error                      0.3843
+Root mean squared error                  0.6199
+Relative absolute error                 76.8651 %
+Root relative squared error            123.9701 %
+Total Number of Instances            10000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.485    0.253    0.657      0.485    0.558      0.240    0.616     0.576     1
+                 0.747    0.515    0.592      0.747    0.660      0.240    0.616     0.569     -1
+Weighted Avg.    0.616    0.384    0.624      0.616    0.609      0.240    0.616     0.572     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2425 2576 |    a = 1
+ 1267 3732 |    b = -1
+

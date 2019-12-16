@@ -1,0 +1,54 @@
+Full dataset
+
+Filter: Class assign
+Filter: StringToWordVector
+		MultiStopWords
+		Normalize
+
+Classify
+IBK - plus proche voisin
+Test options: Cross-validation Folds 20
+Labels
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     datasetlabels-weka.filters.unsupervised.attribute.ClassAssigner-Clast-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-N1-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.MultiStopwords-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters " \r\n\t.,;:\'\"()?!"-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    10000
+Attributes:   1199
+              [list of attributes omitted]
+Test mode:    20-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6131               61.31   %
+Incorrectly Classified Instances      3869               38.69   %
+Kappa statistic                          0.2262
+Mean absolute error                      0.3869
+Root mean squared error                  0.6219
+Relative absolute error                 77.3848 %
+Root relative squared error            124.3895 %
+Total Number of Instances            10000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.479    0.253    0.655      0.479    0.553      0.235    0.613     0.574     1
+                 0.747    0.521    0.589      0.747    0.659      0.235    0.613     0.567     -1
+Weighted Avg.    0.613    0.387    0.622      0.613    0.606      0.235    0.613     0.571     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2397 2604 |    a = 1
+ 1265 3734 |    b = -1
+
