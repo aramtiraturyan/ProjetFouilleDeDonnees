@@ -1,4 +1,4 @@
-
+#Fouille De Donnees
 Université de Montpellier
 Fouille de données - HMIN326, 2019
 
@@ -8,3 +8,5 @@ Preparé par:
 Hajjaj, Ahmed
 Ouail, Mohammed
 Tiraturyan, Aram
+
+Weka, PHP, Python
