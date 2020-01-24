@@ -1,4 +1,3 @@
-#Fouille De Donnees
 Université de Montpellier
 Fouille de données - HMIN326, 2019
 
